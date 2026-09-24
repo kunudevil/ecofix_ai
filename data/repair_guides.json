@@ -1,0 +1,346 @@
+[
+  {
+    "device": "smartphone",
+    "guides": [
+      {
+        "keywords": ["battery", "drains fast", "won't charge", "charging", "battery life", "dead battery", "not charging"],
+        "title": "Smartphone Battery Replacement & Charging Fix",
+        "difficulty": "medium",
+        "tools_needed": ["Phillips #00 screwdriver", "plastic spudger", "suction cup", "isopropyl alcohol (90%+)", "replacement battery"],
+        "safety_warnings": [
+          "NEVER puncture or bend a lithium-ion battery — thermal runaway risk.",
+          "Power off the device completely before opening.",
+          "Do not use metal tools near the battery connector.",
+          "Work in a ventilated area away from flammables."
+        ],
+        "steps": [
+          "Power off the phone completely and remove the SIM tray.",
+          "Apply a heated suction cup to the screen edge for 60 seconds to soften adhesive, then pull the screen up gently with the spudger.",
+          "Disconnect the battery flex cable connector using a plastic spudger — never metal.",
+          "Remove all screws securing the battery bracket, then carefully peel the battery using the pull-tab or a plastic tool.",
+          "Clean the battery bay with isopropyl alcohol on a cotton swab.",
+          "Place the new battery, reconnect the flex cable, reseat the screen, and test charge for 30 minutes before closing."
+        ]
+      },
+      {
+        "keywords": ["cracked screen", "broken display", "touch not working", "screen replacement", "digitizer"],
+        "title": "Smartphone Screen & Digitizer Replacement",
+        "difficulty": "hard",
+        "tools_needed": ["Phillips #00 screwdriver", "plastic spudger", "suction cup", "heat gun or iOpener", "replacement screen assembly"],
+        "safety_warnings": [
+          "Disconnect the battery before touching any flex cables.",
+          "Use only plastic tools near flex connectors to avoid short circuits.",
+          "Screen glass fragments are sharp — wear safety glasses."
+        ],
+        "steps": [
+          "Power off the phone and disconnect the battery first.",
+          "Apply heat along the screen edges (60–80°C) to soften adhesive.",
+          "Insert the spudger at the bottom corner and carefully pry the screen assembly away from the frame.",
+          "Disconnect all display flex connectors (typically 2–3 ribbons).",
+          "Transfer any brackets or sensors from the old screen to the new assembly.",
+          "Reconnect flex cables, reconnect battery, test functionality before applying adhesive.",
+          "Apply fresh adhesive strips, press the screen firmly for 5 minutes."
+        ]
+      },
+      {
+        "keywords": ["speaker", "no sound", "muffled", "earpiece", "microphone", "mic not working"],
+        "title": "Smartphone Speaker / Microphone Repair",
+        "difficulty": "medium",
+        "tools_needed": ["Phillips #00 screwdriver", "plastic spudger", "compressed air can", "replacement speaker"],
+        "safety_warnings": [
+          "Disconnect the battery before removing any internal components.",
+          "Avoid touching PCB components with bare hands — ESD risk."
+        ],
+        "steps": [
+          "Power off and disconnect the battery.",
+          "Blast compressed air into the speaker grille — debris is the most common cause of muffled sound.",
+          "If no improvement, open the device and locate the speaker module.",
+          "Disconnect the speaker flex cable and remove the retaining bracket.",
+          "Swap in the replacement speaker, reconnect, and test before closing."
+        ]
+      }
+    ]
+  },
+  {
+    "device": "laptop",
+    "guides": [
+      {
+        "keywords": ["overheating", "fan noise", "hot", "thermal", "throttling", "fan loud", "gets hot"],
+        "title": "Laptop Overheating — Thermal Paste & Fan Cleaning",
+        "difficulty": "medium",
+        "tools_needed": ["Phillips screwdriver set", "plastic spudger", "thermal paste (MX-4 or equivalent)", "compressed air", "lint-free cloth", "isopropyl alcohol (90%+)"],
+        "safety_warnings": [
+          "Shut down and unplug the laptop. Remove the battery if removable.",
+          "Ground yourself with an ESD wrist strap before touching the motherboard.",
+          "Allow the CPU/GPU to cool completely before applying thermal paste."
+        ],
+        "steps": [
+          "Shut down, unplug, and remove the bottom panel screws.",
+          "Locate the fan and heatsink assembly. Use compressed air to blow dust from fins and fan blades.",
+          "Remove heatsink screws in a cross pattern (to avoid CPU die cracking), then lift the heatsink.",
+          "Clean old thermal paste from CPU/GPU die and heatsink contact plate using isopropyl alcohol and a lint-free cloth.",
+          "Apply a pea-sized dot of fresh thermal paste to the center of the CPU die.",
+          "Reseat the heatsink, tighten screws in a cross pattern, and reconnect the fan cable.",
+          "Boot the laptop and verify temperatures drop 10–20°C under load."
+        ]
+      },
+      {
+        "keywords": ["keyboard", "key not working", "keys stuck", "spill", "keyboard replacement"],
+        "title": "Laptop Keyboard Key Repair / Replacement",
+        "difficulty": "easy",
+        "tools_needed": ["Plastic pry tool or flathead", "replacement keycap or full keyboard", "Phillips screwdriver"],
+        "safety_warnings": [
+          "Power off and disconnect the charger before any keyboard work.",
+          "After a liquid spill, power off immediately and let dry for 48 hours minimum before attempting repair."
+        ],
+        "steps": [
+          "For a single stuck key: use a plastic pry tool to gently pop off the keycap from one corner.",
+          "Clean under the key with a cotton swab and compressed air.",
+          "Inspect the scissor mechanism — realign or replace if broken.",
+          "Press the keycap back on until it clicks.",
+          "For full keyboard replacement: remove the bottom panel, disconnect the keyboard ribbon cable, unscrew the keyboard, and swap in the replacement."
+        ]
+      },
+      {
+        "keywords": ["won't turn on", "no power", "dead", "black screen", "not booting", "power button"],
+        "title": "Laptop No Power / Won't Boot Diagnosis",
+        "difficulty": "medium",
+        "tools_needed": ["Multimeter", "known-good charger", "Phillips screwdriver"],
+        "safety_warnings": [
+          "Do not open the laptop while connected to mains power.",
+          "Check for swollen or leaking batteries before handling."
+        ],
+        "steps": [
+          "Test with a known-good charger. Measure charger DC output with a multimeter — should match laptop spec (e.g., 19V).",
+          "Remove the battery and try powering on with only the charger — rules out dead battery.",
+          "Perform a hard reset: hold power button for 30 seconds with battery removed and charger unplugged.",
+          "Reseat RAM sticks — remove them, clean contacts with an eraser, reinsert firmly.",
+          "If still no power, test the DC power jack for continuity and check for bent pins."
+        ]
+      }
+    ]
+  },
+  {
+    "device": "headphones",
+    "guides": [
+      {
+        "keywords": ["cable", "wire", "one side", "left ear", "right ear", "no sound", "crackling", "audio cut"],
+        "title": "Headphone Cable Fault — Repair or Replacement",
+        "difficulty": "medium",
+        "tools_needed": ["Soldering iron (25W)", "solder", "wire strippers", "heat shrink tubing", "multimeter", "replacement 3.5mm jack (if needed)"],
+        "safety_warnings": [
+          "Work in a ventilated area when soldering — flux fumes are irritating.",
+          "Do not overheat the driver housing — sustained heat damages the membrane."
+        ],
+        "steps": [
+          "Flex the cable near the plug and near each ear cup while playing audio — if sound cuts in/out, you've found the fault zone.",
+          "Cut the cable 2cm either side of the fault. Strip and tin the exposed wires.",
+          "Match wire colours: typically Red = Right, Blue/Green = Left, Copper/Bare = Ground.",
+          "Twist matching wires together, solder, and cover each joint individually with heat shrink.",
+          "Test continuity with a multimeter across the repaired section before final assembly.",
+          "If the 3.5mm plug is faulty, cut it off, thread new heat shrink onto the cable, solder to a replacement TRS plug: Tip = Left, Ring = Right, Sleeve = Ground."
+        ]
+      },
+      {
+        "keywords": ["ear pad", "cushion", "falling off", "worn", "foam", "replacement pad"],
+        "title": "Headphone Ear Pad Replacement",
+        "difficulty": "easy",
+        "tools_needed": ["Replacement ear pads (matching model)", "plastic pry tool (optional)"],
+        "safety_warnings": [
+          "Do not use sharp tools near the driver mesh — puncturing it will damage the speaker."
+        ],
+        "steps": [
+          "Rotate or peel the old ear pad counterclockwise (most snap-on pads) or pull it straight off.",
+          "Clean the mounting ring with a damp cloth and allow to dry.",
+          "Align the new ear pad with the mounting ring and press firmly around the circumference until it snaps into place.",
+          "Test fit by pressing the headphone to your ear — no gaps should be present."
+        ]
+      },
+      {
+        "keywords": ["headband", "broken headband", "crack", "snapped", "hinge", "broken"],
+        "title": "Headphone Headband Crack Repair",
+        "difficulty": "easy",
+        "tools_needed": ["Strong epoxy (e.g., JB Weld)", "clamp or tape", "sandpaper (220 grit)"],
+        "safety_warnings": [
+          "Ensure epoxy is fully cured (24h) before flexing the headband."
+        ],
+        "steps": [
+          "Clean the crack surfaces with isopropyl alcohol and lightly sand for better adhesion.",
+          "Mix epoxy per instructions and apply to both surfaces.",
+          "Press together firmly and clamp or tape in alignment.",
+          "Allow 24 hours full cure before use.",
+          "For structural cracks, reinforce with a strip of self-fusing silicone tape over the joint."
+        ]
+      }
+    ]
+  },
+  {
+    "device": "tablet",
+    "guides": [
+      {
+        "keywords": ["battery", "won't charge", "drains", "battery replacement", "swollen battery"],
+        "title": "Tablet Battery Replacement",
+        "difficulty": "medium",
+        "tools_needed": ["Plastic spudger", "suction cup", "Phillips screwdriver", "isopropyl alcohol", "replacement battery"],
+        "safety_warnings": [
+          "NEVER use metal tools to pry a lithium-ion battery — puncture causes fire.",
+          "If the battery is visibly swollen, do not charge it. Place the device in a fireproof container.",
+          "Power off completely before opening."
+        ],
+        "steps": [
+          "Power off the tablet and heat the edges with a heat gun at low setting (60°C) to soften adhesive.",
+          "Use a suction cup to create separation, then run a spudger along all four edges.",
+          "Locate and disconnect the battery flex cable before touching anything else.",
+          "Peel the battery using the pull tab or plastic lever — never metal.",
+          "Clean the bay with isopropyl alcohol, install the new battery, reconnect the cable.",
+          "Test power on before resealing. Apply new adhesive strips and press the back cover for 5 minutes."
+        ]
+      },
+      {
+        "keywords": ["touchscreen", "touch not responding", "screen crack", "digitizer", "broken screen"],
+        "title": "Tablet Touchscreen Digitizer Replacement",
+        "difficulty": "hard",
+        "tools_needed": ["Heat gun", "suction cup", "plastic spudger set", "Phillips screwdriver", "replacement digitizer"],
+        "safety_warnings": [
+          "Disconnect the battery before removing display connectors.",
+          "Wear safety glasses — cracked glass can shed sharp fragments."
+        ],
+        "steps": [
+          "Power off and disconnect the battery.",
+          "Heat the screen perimeter at 60–80°C for 2 minutes to soften adhesive.",
+          "Apply suction cup to the top of the screen, pull to create a gap, insert spudger.",
+          "Slowly trace the spudger around all four edges to release adhesive.",
+          "Disconnect all digitizer and display flex cables.",
+          "Clean the frame of old adhesive. Install new adhesive strips.",
+          "Connect the new digitizer, test touch function before sealing, then press closed."
+        ]
+      },
+      {
+        "keywords": ["charging port", "won't charge", "loose port", "usb port", "charging connector"],
+        "title": "Tablet Charging Port Repair",
+        "difficulty": "hard",
+        "tools_needed": ["Soldering iron (fine tip)", "flux", "solder wick", "Phillips screwdriver", "replacement charging port module"],
+        "safety_warnings": [
+          "Disconnect the battery before any soldering work.",
+          "Work in a ventilated area. Do not overheat the PCB — sustained heat causes trace lift."
+        ],
+        "steps": [
+          "Open the tablet and disconnect the battery.",
+          "Locate the charging port — on most tablets it is a flex-mounted module.",
+          "If flex-mounted: disconnect the ribbon cable, unscrew, and swap in the new module.",
+          "If soldered directly to PCB: apply flux, use solder wick to remove old solder, heat each pin with iron, lift the old port, clean pads.",
+          "Align the new port over the pads, tack two corner pins first, then solder all pins.",
+          "Inspect joints under magnification. No bridges. Test charge before reassembly."
+        ]
+      }
+    ]
+  },
+  {
+    "device": "earbuds",
+    "guides": [
+      {
+        "keywords": ["one earbud dead", "one side silent", "left earbud", "right earbud", "no sound one ear"],
+        "title": "Wired Earbud — Single-Side Audio Fix",
+        "difficulty": "medium",
+        "tools_needed": ["Multimeter", "soldering iron (15–25W)", "solder", "heat shrink", "wire strippers"],
+        "safety_warnings": [
+          "Work in a ventilated area when soldering.",
+          "The driver housing is very small — do not apply heat for more than 3 seconds at a time."
+        ],
+        "steps": [
+          "Flex the cable near the jack and near the silent earbud while playing audio to find the break point.",
+          "Cut and strip wire at the fault. Match colour coding: Right = Red, Left = Blue/Green, Ground = Copper.",
+          "Twist, solder, and individually insulate each wire with heat shrink.",
+          "Test audio continuity with a multimeter before sealing.",
+          "If driver itself is silent after cable check, open the earbud housing and resolder the hair-thin driver wires."
+        ]
+      },
+      {
+        "keywords": ["ear tip", "silicone tip", "falling off", "tip replacement", "fit"],
+        "title": "Earbud Silicone Tip Replacement",
+        "difficulty": "easy",
+        "tools_needed": ["Replacement silicone tips (S/M/L matching stem diameter)"],
+        "safety_warnings": [
+          "Ensure tips fully seat on the nozzle — a loose tip can become lodged in the ear canal."
+        ],
+        "steps": [
+          "Pinch and pull the old tip straight off the nozzle.",
+          "Inspect the nozzle mesh for wax buildup — clean with a dry toothbrush.",
+          "Stretch the new tip over the nozzle and press firmly until the inner groove snaps into place.",
+          "Tug gently to confirm it is secure before use."
+        ]
+      },
+      {
+        "keywords": ["tws", "wireless earbud", "won't connect", "bluetooth", "pairing", "case not charging"],
+        "title": "TWS Earbud — Pairing Reset & Charging Case Fix",
+        "difficulty": "easy",
+        "tools_needed": ["Isopropyl alcohol", "cotton swab", "toothpick"],
+        "safety_warnings": [
+          "Do not immerse the case in liquid — moisture damage will void repair options."
+        ],
+        "steps": [
+          "Factory reset: place both earbuds in the case, hold the case button for 10+ seconds until LEDs flash reset pattern (refer to model manual).",
+          "Delete the device from your phone Bluetooth list, then re-pair from scratch.",
+          "If case won't charge: clean the case charging pins with a dry cotton swab and isopropyl alcohol.",
+          "Clean the earbud contact pads inside the case with a dry toothpick — oxidation buildup is the most common cause of poor charging."
+        ]
+      }
+    ]
+  },
+  {
+    "device": "smartwatch",
+    "guides": [
+      {
+        "keywords": ["battery", "won't charge", "drains", "battery life", "low battery"],
+        "title": "Smartwatch Battery Replacement",
+        "difficulty": "hard",
+        "tools_needed": ["Pentalobe or Phillips micro screwdriver", "plastic spudger", "suction cup", "UV adhesive or adhesive gasket", "replacement battery"],
+        "safety_warnings": [
+          "Smartwatch batteries are extremely small — puncture risk is high. Use only plastic tools.",
+          "Power off completely before opening.",
+          "Do not attempt if battery is swollen — place in a fireproof bag."
+        ],
+        "steps": [
+          "Power off the watch and remove any bands.",
+          "Heat the back cover at 50–60°C to loosen adhesive. Apply suction cup and gently pry the back.",
+          "Disconnect the battery flex cable connector using a plastic spudger.",
+          "Remove the battery using the pull tab — never lever with metal.",
+          "Fit the replacement battery, reconnect the flex cable, test power on.",
+          "Apply new adhesive gasket or UV adhesive around the perimeter and press the back cover closed for 2 minutes."
+        ]
+      },
+      {
+        "keywords": ["crown", "button", "crown stuck", "side button", "button not working"],
+        "title": "Smartwatch Digital Crown / Button Fix",
+        "difficulty": "medium",
+        "tools_needed": ["Pentalobe screwdriver", "plastic spudger", "compressed air", "isopropyl alcohol"],
+        "safety_warnings": [
+          "Do not spray isopropyl alcohol directly into crown gap — use a cotton swab."
+        ],
+        "steps": [
+          "Turn the crown rapidly 20+ times to work out debris — often resolves stiffness.",
+          "Apply a tiny amount of isopropyl alcohol around the crown gap with a cotton swab, then rotate to distribute.",
+          "Blast the crown gap with compressed air.",
+          "If still stuck: open the case, remove the crown assembly, clean the seal and O-ring, reinstall."
+        ]
+      },
+      {
+        "keywords": ["screen crack", "broken screen", "display crack", "glass crack"],
+        "title": "Smartwatch Screen Glass Replacement",
+        "difficulty": "hard",
+        "tools_needed": ["Heat gun", "suction cup", "plastic spudger", "UV adhesive", "replacement glass"],
+        "safety_warnings": [
+          "Cracked smartwatch glass is extremely sharp — wear gloves and safety glasses.",
+          "Disconnect the battery before removing the display assembly."
+        ],
+        "steps": [
+          "Power off. Heat the screen at 60°C for 90 seconds.",
+          "Apply suction cup and pull while running spudger around the perimeter.",
+          "If only the glass is cracked (OLED intact), use UV adhesive to bond replacement glass.",
+          "If OLED is damaged, disconnect the battery, then disconnect the display flex cable and swap the full assembly.",
+          "Apply UV adhesive around the frame, seat the new screen, cure under UV lamp for 60 seconds."
+        ]
+      }
+    ]
+  }
+]

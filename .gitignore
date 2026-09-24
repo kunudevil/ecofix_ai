@@ -1,0 +1,23 @@
+﻿# EcoFix AI — .gitignore
+
+# Secrets — NEVER commit
+.env
+*.env
+.streamlit/secrets.toml
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

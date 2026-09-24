@@ -1,0 +1,168 @@
+{
+  "tools": [
+    {
+      "tool_name": "Digital Multimeter",
+      "mode": "Continuity Mode (Diode/Sound Symbol)",
+      "purpose": "Check if a wire, fuse, or circuit trace is intact without breaks.",
+      "how_to_use": [
+        "1. Turn off all power and unplug the appliance completely.",
+        "2. Turn selector dial to the Continuity symbol (sound wave / diode symbol).",
+        "3. Touch black probe to red probe — listen for a continuous BEEP confirming meter works.",
+        "4. Place probes across the wire, fuse, or PCB trace under test.",
+        "5. BEEP = Intact circuit (0 \u03a9). SILENCE = Open circuit / Blown trace."
+      ],
+      "safety_warning": "NEVER perform continuity tests on a live circuit or charged high-voltage capacitor!"
+    },
+    {
+      "tool_name": "Digital Multimeter",
+      "mode": "DC Voltage Mode (V\u2550)",
+      "purpose": "Measure output voltages of low-voltage DC power rails (5V, 12V, 15V) on appliance control boards.",
+      "how_to_use": [
+        "1. Set dial to DC Voltage (V with a straight line above it).",
+        "2. Set range higher than expected voltage (e.g., 20V DC range for a 12V circuit).",
+        "3. Place Black probe on GND (Ground / negative terminal).",
+        "4. Place Red probe on the VCC / output test point.",
+        "5. Read voltage on display and compare to schematic specification."
+      ],
+      "safety_warning": "Exercise extreme caution around the primary AC side (220V/110V) and the 300V DC bus capacitors — lethal voltages present even after unplugging!"
+    },
+    {
+      "tool_name": "Digital Multimeter",
+      "mode": "Resistance Mode (\u03a9)",
+      "purpose": "Measure resistor values and check for short circuits or open circuits in components.",
+      "how_to_use": [
+        "1. Power off the circuit completely and discharge any capacitors.",
+        "2. Set dial to the Resistance symbol (\u03a9).",
+        "3. Place probes across the component under test.",
+        "4. Read resistance in ohms (\u03a9), kilohms (k\u03a9), or megohms (M\u03a9).",
+        "5. 0 \u03a9 = Short circuit. OL / 1 on display = Open circuit (infinite resistance)."
+      ],
+      "safety_warning": "NEVER measure resistance on a powered or charged circuit — this will damage the meter and can cause injury!"
+    },
+    {
+      "tool_name": "Soldering Iron",
+      "mode": "Standard Through-Hole & SMD Rework",
+      "purpose": "Join electrical wires and solder or desolder components on PCBs.",
+      "how_to_use": [
+        "1. Set iron temperature: 320\u00b0C (608\u00b0F) for leaded solder, 370\u00b0C (698\u00b0F) for lead-free.",
+        "2. Tin the tip: apply a small amount of solder to the clean tip before use.",
+        "3. Heat both the pad and the component lead simultaneously for 2\u20133 seconds.",
+        "4. Apply solder to the joint (not the iron tip) and allow it to flow.",
+        "5. Remove solder, then iron. Allow joint to cool without movement for 5 seconds.",
+        "6. A good joint is shiny and smooth. A cold/bad joint looks dull or grainy."
+      ],
+      "safety_warning": "The iron tip reaches 370\u00b0C+ and causes instant burns. Work in a ventilated area \u2014 flux fumes are a respiratory irritant. Never leave a heated iron unattended."
+    },
+    {
+      "tool_name": "ESD Wrist Strap",
+      "mode": "Electrostatic Discharge Protection",
+      "purpose": "Safely ground yourself to prevent static electricity from damaging sensitive ICs, MOSFETs, and microcontrollers.",
+      "how_to_use": [
+        "1. Attach the wrist strap snugly to your bare wrist.",
+        "2. Connect the alligator clip end to a grounded metal surface (e.g., PC case chassis, grounded work mat).",
+        "3. Test continuity of the strap with a multimeter before critical work \u2014 the strap contains a 1 M\u03a9 safety resistor.",
+        "4. Wear throughout all component handling and PCB work.",
+        "5. Remove before connecting power to test a circuit."
+      ],
+      "safety_warning": "The built-in 1 M\u03a9 resistor prevents shock under normal conditions, but never wear an ESD strap while working on live high-voltage circuits."
+    }
+  ],
+  "components": [
+    {
+      "name": "Electrolytic Capacitor",
+      "appliance": "Consumer Electronics",
+      "function": "Smooths voltage ripples and stores temporary electric charge in power supply circuits.",
+      "circuit_impact": "If it fails (bulging top, brown crust, or leaking electrolyte), the device loses voltage stability, causing random reboots, screen flicker, hum/noise, or failure to power on.",
+      "how_to_test": "Visually inspect for a bulging or domed top and brown residue at the base. In Resistance mode, resistance should start near 0 \u03a9 and climb steadily as the capacitor charges. A reading that stays at 0 \u03a9 indicates a short.",
+      "operating_parameters": "Must match or exceed original capacitance (\u03bcF) and voltage rating (V). Polarity is critical \u2014 the negative stripe (white band) must face Ground. Replace a 16V cap with a 25V cap: acceptable. Replace with a 10V cap: will fail and may explode."
+    },
+    {
+      "name": "Resistor",
+      "appliance": "Consumer Electronics",
+      "function": "Limits current flow in a circuit, sets bias voltages, and acts as a pull-up or pull-down reference.",
+      "circuit_impact": "An open (burnt) resistor blocks current entirely, disabling the circuit it controls. A shorted resistor allows excess current, overheating downstream components.",
+      "how_to_test": "Remove from circuit. Set multimeter to Resistance (\u03a9). Measure across both leads. Compare to colour band value. OL = Open/blown resistor. 0 \u03a9 = Shorted resistor.",
+      "operating_parameters": "Select wattage rating for at least 2\u00d7 the calculated dissipation (P = V\u00b2/R). Common ratings: 1/8W, 1/4W, 1/2W, 1W, 2W. Standard value series: E12 (10%) and E24 (5%)."
+    },
+    {
+      "name": "Diode / LED",
+      "appliance": "Consumer Electronics",
+      "function": "Allows current to flow in one direction only (rectification, protection). LEDs emit light when forward biased.",
+      "circuit_impact": "A shorted diode allows reverse current, potentially damaging the power supply. An open diode blocks current in both directions, disabling the protected circuit or causing no-light fault.",
+      "how_to_test": "Set multimeter to Diode mode. Place Red probe on Anode (+), Black on Cathode (-). A healthy silicon diode reads 0.5\u20130.7V. A Schottky reads 0.2\u20130.4V. OL = Open (failed). 0V = Short.",
+      "operating_parameters": "Observe maximum forward current (IF) and peak inverse voltage (PIV/VR). For LEDs, always include a current-limiting resistor: R = (Vsupply \u2212 VLED) / IF."
+    },
+    {
+      "name": "Fuse / Thermal Fuse",
+      "appliance": "Consumer Electronics",
+      "function": "Protects the circuit by melting its wire when excess current or heat causes it to open, breaking the circuit.",
+      "circuit_impact": "When blown, it cuts power to the entire device or a subsystem, preventing fire or further damage.",
+      "how_to_test": "Test continuity across the fuse. BEEP = Good. SILENCE = Blown fuse. Never bypass a fuse with a wire jumper.",
+      "operating_parameters": "Replace ONLY with identical Ampere (A) and Voltage (V) rating. Using a higher-rated fuse defeats its protection purpose and is a fire hazard."
+    },
+    {
+      "name": "MOSFET / Transistor",
+      "appliance": "Consumer Electronics",
+      "function": "Acts as an electronic switch or amplifier to control high-current loads from a low-current signal.",
+      "circuit_impact": "A shorted MOSFET passes current continuously regardless of gate signal, causing the load to run uncontrolled and the device to overheat. An open MOSFET disables the load entirely.",
+      "how_to_test": "In Diode mode: check Drain-to-Source (forward biased: 0.4\u20130.7V; reverse: OL). Gate-to-Source and Gate-to-Drain should both read OL. 0V on any pin pair indicates a dead short.",
+      "operating_parameters": "Key ratings: VDS (max drain-source voltage), ID (max continuous drain current), RDS(on) (on-resistance). Do not exceed VGS(max) or the gate oxide will rupture permanently."
+    },
+    {
+      "name": "Li-Ion Battery Management System (BMS)",
+      "appliance": "Consumer Electronics",
+      "function": "Protects the lithium-ion cell pack from overcharge (>4.2V/cell), over-discharge (<2.7V/cell), overcurrent, and thermal runaway.",
+      "circuit_impact": "A failed BMS can prevent charging entirely, cause the battery to drain to zero irreversibly, or in rare cases fail to cut off an overcharging event, causing thermal runaway.",
+      "how_to_test": "Measure pack voltage at the output terminals. If voltage is present at cell terminals but 0V at output pads, the BMS protection circuit has tripped. Try a recovery charge at 0.1C for 10 minutes.",
+      "operating_parameters": "Cell voltage window: 2.7V (low cutoff) to 4.2V (full charge) per cell. Balance threshold: \u226410mV difference between cells in a pack."
+    },
+    {
+      "name": "Inverter AC Power Module (IPM IC / IGBT Driver)",
+      "appliance": "Inverter Air Conditioner",
+      "function": "Converts 300V DC bus into variable-frequency 3-phase AC power to dynamically control compressor motor speed, enabling energy-efficient cooling.",
+      "circuit_impact": "If shorted or overheated, the compressor will not start, the outdoor unit throws error codes (e.g., E1, E5, H6), or the main circuit breaker trips immediately on startup.",
+      "how_to_test": "Unplug from mains and wait 10 minutes for the 300V DC bus capacitor to discharge. Verify discharge with a multimeter (DC Voltage mode) on the main capacitor terminals. Then use Diode mode: check diode drop across U, V, W output terminals relative to DC(+) and DC(-) bus. Reading of 0V on any terminal indicates a dead short in the IPM.",
+      "operating_parameters": "High Voltage DC Bus: 300V\u2013380V DC. Low Voltage Logic Supply: 15V VCC (gate drive), 3.3V or 5V signal. Requires thermal paste and secure heatsink mounting. Replacement must match original part number."
+    },
+    {
+      "name": "Refrigerator Relay Driver IC (ULN2003 / Darlington Array)",
+      "appliance": "Refrigerator",
+      "function": "Amplifies low-current signals from the main microcontroller to switch 12V relay coils for the compressor, defrost heater, and evaporator fan.",
+      "circuit_impact": "When damaged, the relay fails to click. Symptoms: no cooling, frost accumulation on evaporator coils, compressor running continuously without auto-cutoff, or no defrost cycle.",
+      "how_to_test": "Trigger cooling mode. Measure DC voltage across the relay coil pins \u2014 should read 12V when relay is commanded on. Check resistance between ULN2003 input (IN) and output (OUT) pins with power off: should not be 0 \u03a9 (short).",
+      "operating_parameters": "Logic input: 5V. Output: 12V DC to relay coil. Maximum current: 500mA per channel. 7 channels on ULN2003. Input pins 1\u20137, output pins 10\u201316, common pin 9 to 12V supply."
+    },
+    {
+      "name": "BLDC Motor Driver IC (3-Phase Brushless DC Driver)",
+      "appliance": "BLDC Ceiling Fan / Washing Machine",
+      "function": "Drives BLDC motor coils using PWM signals and Hall sensor feedback to achieve high energy efficiency and variable speed control.",
+      "circuit_impact": "If damaged, the BLDC motor hums without rotating, vibrates excessively, rotates jerkily (missing phase), or fails to start completely.",
+      "how_to_test": "Check 3-phase winding resistance (U\u2013V, V\u2013W, W\u2013U) with multimeter in Resistance mode \u2014 all three readings should be equal (balanced windings). Check VCC supply pin for correct 12V or 24V DC voltage with power applied.",
+      "operating_parameters": "Supply Voltage: 12V\u201324V DC for low-voltage fans; 310V DC for high-voltage BLDC motors. PWM signal: 0\u20135V logic. Hall sensor supply: 5V. Replace with exact part or compatible equivalent."
+    },
+    {
+      "name": "SMPS Controller IC (VIPer12A / TNY278 / UC3842)",
+      "appliance": "Microwave / Induction Cooktop / Washing Machine",
+      "function": "Switched-Mode Power Supply PWM controller that steps down 220V AC to regulated 5V DC (microcontroller supply) and 12V DC (relay / fan supply).",
+      "circuit_impact": "If blown, the entire appliance is completely dead \u2014 no display, no LEDs, no response. The primary cause is mains surge or failed primary-side capacitor.",
+      "how_to_test": "Visually inspect IC body for pinholes, cracks, or burn marks. With power OFF and capacitor discharged: measure resistance between Drain and Source pins. 0 \u03a9 = Shorted IC (requires replacement). Also check the 10 \u03a9 flameproof auxiliary resistor in series with the drain for continuity.",
+      "operating_parameters": "Drain pin peak voltage: up to 700V DC. VCC supply range: 9V\u201316V DC. Operating frequency: 60kHz (typical). Replace with exact part number for safety compliance."
+    },
+    {
+      "name": "Induction Cooktop IGBT & Driver IC",
+      "appliance": "Induction Cooktop",
+      "function": "Switches high-frequency current (20kHz\u201340kHz) through the induction coil to generate an alternating electromagnetic field that heats ferrous cookware.",
+      "circuit_impact": "A blown IGBT causes a loud pop, immediately blows the main fuse, and trips the house circuit breaker. The cooktop will not power on until the IGBT and fuse are replaced.",
+      "how_to_test": "With mains disconnected and main capacitor discharged: set multimeter to Diode mode. Check Collector\u2013Emitter for short (should read OL in both directions when Gate is 0V). Also inspect the Gate driver transistor pair (typically C8050/C8550 NPN/PNP) for shorts.",
+      "operating_parameters": "IGBT rating: typically 1200V, 25A. Gate drive voltage: 15V DC. Resonant capacitor: 0.27\u03bcF / 1200V AC. Always replace IGBT and resonant capacitor together."
+    },
+    {
+      "name": "LED Driver Constant Current IC",
+      "appliance": "LED Bulb / Panel Light",
+      "function": "Regulates a constant output current to LED series strings to prevent thermal runaway caused by the negative temperature coefficient of LEDs.",
+      "circuit_impact": "A failing driver IC causes LED lights to strobe/flicker rapidly, dim progressively, or shut down after a few minutes of operation as it overheats.",
+      "how_to_test": "Measure DC output voltage across the LED strip header. If voltage is floating high (above rated) with no current flowing, one LED in the series string is open-circuit or the driver IC output is unregulated.",
+      "operating_parameters": "Typical output current: 240mA\u2013300mA constant. Output voltage: 30V\u2013120V DC depending on LED string count. Input: rectified AC (100V\u2013270V DC bus). Replace with exact current rating to maintain LED brightness and lifespan."
+    }
+  ]
+}

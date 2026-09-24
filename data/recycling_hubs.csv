@@ -1,0 +1,13 @@
+name,city,state,zip,accepts,certified,phone,url
+GreenCycle Electronics,Austin,TX,78701,"smartphone,laptop,tablet,earbuds,smartwatch,headphones",True,(512) 555-0101,https://greencycleelectronics.example.com
+EcoReclaim Hub,Portland,OR,97201,"smartphone,laptop,tablet,headphones",True,(503) 555-0202,https://ecoreclaim.example.com
+TechReturn Center,Chicago,IL,60601,"smartphone,laptop,earbuds,smartwatch",True,(312) 555-0303,https://techreturn.example.com
+Responsible Recyclers,New York,NY,10001,"smartphone,laptop,tablet,earbuds,headphones,smartwatch",True,(212) 555-0404,https://responsiblerecyclers.example.com
+Clean Earth E-Waste,San Jose,CA,95101,"laptop,tablet,smartphone,smartwatch",True,(408) 555-0505,https://cleanearthewaste.example.com
+PlanetSafe Recycling,Seattle,WA,98101,"smartphone,laptop,headphones,earbuds",True,(206) 555-0606,https://planetsafe.example.com
+CircuLink Recovery,Denver,CO,80201,"smartphone,tablet,laptop,earbuds,smartwatch",False,(720) 555-0707,https://circulink.example.com
+DeviceBack Solutions,Atlanta,GA,30301,"smartphone,laptop,tablet,headphones",True,(404) 555-0808,https://deviceback.example.com
+LoopBack Electronics,Boston,MA,02101,"laptop,earbuds,smartwatch,headphones",True,(617) 555-0909,https://loopbacke.example.com
+RenewTech Depot,Phoenix,AZ,85001,"smartphone,laptop,tablet,smartwatch,earbuds",True,(480) 555-1010,https://renewtechdepot.example.com
+EarthFirst E-Cycle,Miami,FL,33101,"smartphone,tablet,headphones,earbuds",False,(305) 555-1111,https://earthfirstecycle.example.com
+ReSource Electronics,Minneapolis,MN,55401,"laptop,smartphone,smartwatch,tablet",True,(612) 555-1212,https://resourceelectronics.example.com

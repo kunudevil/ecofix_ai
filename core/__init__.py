@@ -1,0 +1,1 @@
+# EcoFix AI — core package
